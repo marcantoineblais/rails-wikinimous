@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWikinimous</title>
+    <title>Wiki-Markia</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script src="https://kit.fontawesome.com/8dbd947086.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+
+      <header>
+        <div class="header">
+          <%= link_to articles_path do %>
+            <h2>Wiki-Markia</h2>
+          <% end %>
+          <p>We know we are wrong.</p>
+        </div>
+        <%= link_to 'New article', new_article_path, class: :btn %>
+      </header>
+
+      <%= yield %>
+
+    </div>
   </body>
 </html>

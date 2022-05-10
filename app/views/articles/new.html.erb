@@ -1,0 +1,11 @@
+<div class="title">
+  <h2>Create new article</h2>
+  <%= link_to "Back", articles_path, class: :btn %>
+</div>
+<%= form_for(Article.new) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.submit class: :btn %>
+<% end %>

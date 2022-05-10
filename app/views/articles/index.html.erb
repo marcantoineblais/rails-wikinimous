@@ -1,0 +1,12 @@
+<ul>
+  <% @articles.reverse.each do |a| %>
+    <li>
+      <%= link_to article_path(a) do %>
+        <div class="list">
+          <h2><%= a.title %></h2>
+          <p><%= a.content.first(250) %><%= a.content.length >= 250 ? '...' : '' %></p>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

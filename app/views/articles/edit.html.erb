@@ -1,0 +1,12 @@
+<div class="title">
+  <h2>Edit article</h2>
+  <%= link_to "Back", article_path(@article), class: :btn %>
+</div>
+
+<%= form_for(@article) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.submit class: :btn %>
+<% end %>
